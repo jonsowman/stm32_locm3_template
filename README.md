@@ -16,6 +16,8 @@ You will also need Python and make installed.
 * Clone this repo somewhere
 * Run `git submodule update --init`
 * `cd` to the `firmware/libopencm3/` and run `make`.
+* `cd` to `firmware/src/` and run `make` to build the project.
+* Add your own stuff to main.c and have fun!
 
 ## Author
 
