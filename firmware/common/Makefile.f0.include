@@ -24,7 +24,7 @@ DEFS		= -DSTM32F0
 FP_FLAGS	?= -msoft-float
 ARCH_FLAGS	= -mthumb -mcpu=cortex-m0 $(FP_FLAGS)
 
-LDSCRIPT	= stm32f0-discovery.ld
+LDSCRIPT	= ../common/stm32f0-discovery.ld
 
 ################################################################################
 # OpenOCD specific variables
