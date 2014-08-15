@@ -10,8 +10,17 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 
+#ifdef STM32F4
+#define LED_PORT GPIOD
+#define LED_PIN GPIO15
+#define LED_RCC RCC_GPIOD
+#endif
+
+#ifdef STM32F0
 #define LED_PORT GPIOC
 #define LED_PIN GPIO9
+#define LED_RCC RCC_GPIOC
+#endif
 
 /* Private prototypes */
 static void _delay_ms(const uint32_t delay);
@@ -19,7 +28,7 @@ static void _delay_ms(const uint32_t delay);
 int main(void)
 {
     /* Clock the GPIOC peripheral */
-    rcc_periph_clock_enable(RCC_GPIOC);
+    rcc_periph_clock_enable(LED_RCC);
 
     /* Configure the pin as an output */
     gpio_mode_setup(LED_PORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, LED_PIN);
