@@ -8,6 +8,3 @@
 *.coproj
 *.comarker
 *.cogui
-ukhas14
-libopencm3_stm32f0.ld
-stm32f0-discovery.ld
