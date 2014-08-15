@@ -24,7 +24,7 @@ BINARY = main
 SOURCES = $(filter-out $(BINARY).c, $(wildcard *.c))
 OBJS = $(SOURCES:.c=.o)
 
-LDSCRIPT = ../common/stm32f0-discovery.ld
+LDSCRIPT = ../common/stm32f0-ukhasbadge.ld
 
 include ../common/Makefile.include
 
